@@ -47,7 +47,7 @@ section .container {
     align-items: flex-start;
 }
 
-#about .container .linha {
+.about .container .linha {
     width: 100%;
     border-bottom: 2px solid #009DAE;
     margin-bottom: 16px;
@@ -81,12 +81,12 @@ section p {
     justify-content: baseline;
 }
 
-#produto h2 {
+.produto h2 {
     margin-bottom: 16px;
     margin-left: 250px;
 }
 
-#produto .linha {
+.produto .linha {
     width: 72%;
     border-bottom: 2px solid #009DAE;
     margin-bottom: 16px;
@@ -147,109 +147,239 @@ header .search,
     color: black;
 }
 
-.form-campo {
-    margin-bottom: 16px;
-}
 
-.form-campo label {
-    font-weight: bold;
-    display: block;
-}
-
-.form-campo input,
-.form-campo textarea {
-    width: 100%;
-    display: block;
-    padding: 8px;
-}
-
-.form-campo textarea {
-    resize: none;
-    height: 120px;
-}
-
-form {
-    max-width: 360px;
-}
-
-form button {
-    max-width: 120px;
-}
-
-.social-links img {
-    height: 50px;
-}
-
-.social-links li {
-    display: inline;
-    margin-right: 8px;
-}
-
-.social-links li a {
-    text-decoration: none;
-}
-
-#contact .container {
-    display: block;
-}
-
-.contact-methods {
-    display: flex;
-    justify-content: space-between;
-}
-
-footer {
-    background-color: #009DAE;
-    color: #ecf0f1;
-    padding: 16px 0;
-}
-
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 780px) and (orientation: landscape) {
     header {
-        background-color: #71DFE7;
+        background-color: #769FCD;
         color: black;
         font-size: 10px;
         margin-bottom: 0;
         font-weight: bold;
+        max-width: 32.6%;
     }
 
-    header .container {
+    header nav li {
+        display: inline-block;
+        justify-content: space-between;
+        align-items: center;
+        width: 200px;
+        top: 90%;
+        font-size: 16px;
+        margin-left: 35px;
+    }
+
+
+    header h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    body {
         flex-direction: column;
+        grid-template-columns: repeat(2, 32.6%);
+        background-color: #B9D7EA;
+    }
+
+    .about {
+        background-color: #B9D7EA;
+    }
+
+    .conteudo,
+    header {
+        display: grid;
+        grid-template-columns: repeat(3, 32.6%);
+        column-gap: 1%;
+        float: left;
     }
 
     .container {
         max-width: 90%;
-        display: inline;
     }
 
     .store-front {
-        margin-right: 0;
-        max-width: 500px;
-        align-items: center;
+        margin-right: 16px;
+        max-width: 220px;
+        height: auto;
+    }
+
+    .about h2 {
+        font-size: 14px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .about p {
+        font-size: 12px;
+    }
+
+    .about .container {
+        display: inline-block;
+        position: relative;
+        padding: 10px;
+        justify-content: space-between;
+        text-align: justify;
+    }
+
+    .produto {
+        position: relative;
+        top: -110px;
+    }
+
+    .produto li {
+        background-color: #769FCD;
+        margin: 0;
     }
 
 
+    .produto h2,
+    .produto .linha {
+        font-size: 20px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        margin-left: auto;
+        text-align: center;
+    }
 
+    .produtos {
+        display: block;
+        display: grid;
+        grid-template-columns: repeat(2, 70%);
+    }
 
+    .produtos li {
+        max-width: 200px;
+        height: auto;
+    }
+
+    .produtos li img {
+        max-width: 150px;
+        height: auto;
+    }
+
+    .produtos h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+
+    }
 }
 
-/*.conteudo {
-        display: block;
+@media screen and (min-width: 781px) and (max-width: 1023px) and (orientation: landscape) {
+    header {
+        background-color: #769FCD;
+        color: black;
+        font-size: 20px;
+        margin-bottom: 0;
+        font-weight: bold;
+        max-width: 49%;
     }
+
+    header nav li {
+        display: inline-block;
+        justify-content: space-between;
+        align-items: center;
+        width: 200px;
+        top: 90%;
+        font-size: 20px;
+        margin-left: 35px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    .container .menu {
+        text-align: center;
+        margin-left: 130px;
+    }
+
+    body {
+        flex-direction: column;
+        grid-template-columns: repeat(2, 49%);
+        background-color: #B9D7EA;
+    }
+
+    .about {
+        background-color: #B9D7EA;
+    }
+
+    .conteudo,
+    header {
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        column-gap: 1%;
+        float: left;
+    }
+
 
     .container {
         max-width: 90%;
     }
 
-    .destaque .noticia a {
-        display: block;
-        font-size: 1.5em;
+    .store-front {
+        margin-right: 16px;
+        max-width: 430px;
+        height: auto;
     }
 
-    .destaque .noticia img {
-        margin-right: 0;
+    .about h2 {
+        font-size: 30px;
+        margin-bottom: 5px;
+        margin-top: 5px;
     }
 
-    .noticias {
+    .about p {
+        font-size: 16px;
+    }
+
+    .about .container {
+        display: inline-block;
+        position: relative;
+        padding: 10px;
+        justify-content: space-between;
+        text-align: justify;
+    }
+
+    .produto {
+        position: relative;
+        top: -110px;
+    }
+
+    .produto li {
+        background-color: #769FCD;
+        margin: 0;
+        margin-left: -10px;
+    }
+
+    .produto h2,
+    .produto .linha {
+        font-size: 30px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    .produtos li {
+        max-width: 250px;
+        height: auto;
+    }
+
+    .produtos li img {
+        max-width: 200px;
+        height: auto;
+    }
+
+    .produtos {
         display: block;
-    }*/
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .produtos h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+
+    }
+}

@@ -157,6 +157,7 @@ header .search,
     .produtos li {
         max-width: 200px;
         height: auto;
+        margin-left: 75px;
     }
 
 
@@ -177,10 +178,19 @@ header .search,
     .about .container {
         display: grid;
         grid-template-columns: 1fr !important;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    .about h2 {
+        margin-top: 10px;
+        margin-bottom: 3px;
+        margin-left: 30px;
     }
 
     .store-front {
         max-width: 200px !important;
+        margin-left: 75px;
     }
 }
 

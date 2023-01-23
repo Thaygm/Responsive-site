@@ -148,102 +148,10 @@ header .search,
 }
 
 
-@media screen and (max-width: 780px) and (orientation: landscape) {
-    header {
-        background-color: #769FCD;
-        color: black;
-        font-size: 10px;
-        margin-bottom: 0;
-        font-weight: bold;
-        max-width: 32.6%;
-    }
-
-    header nav li {
-        display: inline-block;
-        justify-content: space-between;
-        align-items: center;
-        width: 200px;
-        top: 90%;
-        font-size: 16px;
-        margin-left: 35px;
-    }
-
-
-    header h1 {
-        font-size: 30px;
-        text-align: center;
-    }
-
-    body {
-        flex-direction: column;
-        grid-template-columns: repeat(2, 32.6%);
-        background-color: #B9D7EA;
-    }
-
-    .about {
-        background-color: #B9D7EA;
-    }
-
-    .conteudo,
-    header {
-        display: grid;
-        grid-template-columns: repeat(3, 32.6%);
-        column-gap: 1%;
-        float: left;
-    }
-
-    .container {
-        max-width: 90%;
-    }
-
-    .store-front {
-        margin-right: 16px;
-        max-width: 220px;
-        height: auto;
-    }
-
-    .about h2 {
-        font-size: 14px;
-        margin-bottom: 5px;
-        margin-top: 5px;
-    }
-
-    .about p {
-        font-size: 12px;
-    }
-
-    .about .container {
-        display: inline-block;
-        position: relative;
-        padding: 10px;
-        justify-content: space-between;
-        text-align: justify;
-    }
-
-    .produto {
-        position: relative;
-        top: -110px;
-    }
-
-    .produto li {
-        background-color: #769FCD;
-        margin: 0;
-    }
-
-
-    .produto h2,
-    .produto .linha {
-        font-size: 20px;
-        margin-bottom: 5px;
-        margin-top: 5px;
-        margin-left: auto;
-        text-align: center;
-    }
-
+@media screen and (max-width: 480px) {
     .produtos {
-        display: block;
         display: grid;
-        grid-template-columns: repeat(2, 70%);
+        grid-template-columns: 1fr !important;
     }
 
     .produtos li {
@@ -251,113 +159,35 @@ header .search,
         height: auto;
     }
 
+
     .produtos li img {
-        max-width: 150px;
+        max-width: 100px;
         height: auto;
     }
 
-    .produtos h3 {
-        font-size: 14px;
-        margin-bottom: 5px;
-        margin-top: 5px;
-
-    }
-}
-
-@media screen and (min-width: 781px) and (max-width: 1023px) and (orientation: landscape) {
-    header {
-        background-color: #769FCD;
-        color: black;
-        font-size: 20px;
-        margin-bottom: 0;
-        font-weight: bold;
-        max-width: 49%;
+    .produto h2 {
+        margin-left: 30px;
     }
 
-    header nav li {
-        display: inline-block;
-        justify-content: space-between;
-        align-items: center;
-        width: 200px;
-        top: 90%;
-        font-size: 20px;
-        margin-left: 35px;
+    .produto .linha {
+        margin-left: 40px;
     }
 
-    header h1 {
-        font-size: 40px;
-    }
 
-    .container .menu {
-        text-align: center;
-        margin-left: 130px;
-    }
-
-    body {
-        flex-direction: column;
-        grid-template-columns: repeat(2, 49%);
-        background-color: #B9D7EA;
-    }
-
-    .about {
-        background-color: #B9D7EA;
-    }
-
-    .conteudo,
-    header {
+    .about .container {
         display: grid;
-        grid-template-columns: repeat(2, 49%);
-        column-gap: 1%;
-        float: left;
-    }
-
-
-    .container {
-        max-width: 90%;
+        grid-template-columns: 1fr !important;
     }
 
     .store-front {
-        margin-right: 16px;
-        max-width: 430px;
-        height: auto;
+        max-width: 200px !important;
     }
+}
 
-    .about h2 {
-        font-size: 30px;
-        margin-bottom: 5px;
-        margin-top: 5px;
-    }
-
-    .about p {
-        font-size: 16px;
-    }
-
-    .about .container {
-        display: inline-block;
-        position: relative;
-        padding: 10px;
-        justify-content: space-between;
-        text-align: justify;
-    }
-
-    .produto {
-        position: relative;
-        top: -110px;
-    }
-
-    .produto li {
-        background-color: #769FCD;
-        margin: 0;
-        margin-left: -10px;
-    }
-
-    .produto h2,
-    .produto .linha {
-        font-size: 30px;
-        margin-bottom: 5px;
-        margin-top: 5px;
-        margin-left: auto;
-        text-align: center;
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .produtos {
+        display: grid;
+        grid-template-columns: 1fr 1fr !important;
     }
 
     .produtos li {
@@ -365,21 +195,20 @@ header .search,
         height: auto;
     }
 
+
     .produtos li img {
         max-width: 200px;
         height: auto;
     }
 
-    .produtos {
-        display: block;
+
+    .about .container {
         display: grid;
-        grid-template-columns: repeat(2, 50%);
+        grid-template-columns: 1fr !important;
     }
 
-    .produtos h3 {
-        font-size: 14px;
-        margin-bottom: 5px;
-        margin-top: 5px;
 
+    .store-front {
+        max-width: 200px !important;
     }
 }
